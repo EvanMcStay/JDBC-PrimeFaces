@@ -1,0 +1,15 @@
+127.0.0.1 - - [24/Feb/2017:15:55:42 -0500] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [24/Feb/2017:15:55:42 -0500] "GET /05ListandTable/faces/list_demo.xhtml HTTP/1.1" 500 4115
+0:0:0:0:0:0:0:1 - - [24/Feb/2017:15:56:25 -0500] "GET /05ListandTable/faces/list_demo.xhtml HTTP/1.1" 200 517
+127.0.0.1 - - [24/Feb/2017:16:07:25 -0500] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [24/Feb/2017:16:07:26 -0500] "GET /05ListandTable/faces/table_demo.xhtml HTTP/1.1" 200 1847
+0:0:0:0:0:0:0:1 - - [24/Feb/2017:16:08:45 -0500] "GET /05ListandTable/faces/table_demo.xhtml HTTP/1.1" 200 1847
+127.0.0.1 - - [24/Feb/2017:16:11:43 -0500] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [24/Feb/2017:16:11:44 -0500] "GET /05ListandTable/faces/list_demo.xhtml HTTP/1.1" 200 595
+127.0.0.1 - - [24/Feb/2017:16:12:49 -0500] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [24/Feb/2017:16:12:49 -0500] "GET /05ListandTable/faces/list_demo.xhtml HTTP/1.1" 200 607
+0:0:0:0:0:0:0:1 - - [24/Feb/2017:16:13:25 -0500] "GET /05ListandTable/faces/table_demo.xhtml HTTP/1.1" 200 2638
+123.151.42.61 - - [24/Feb/2017:16:13:52 -0500] "GET / HTTP/1.1" 404 994
+127.0.0.1 - - [24/Feb/2017:16:16:24 -0500] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [24/Feb/2017:16:16:25 -0500] "GET /05ListandTable/faces/list_demo.xhtml HTTP/1.1" 200 671
+0:0:0:0:0:0:0:1 - - [24/Feb/2017:16:16:38 -0500] "GET /05ListandTable/faces/table_demo.xhtml HTTP/1.1" 200 2690

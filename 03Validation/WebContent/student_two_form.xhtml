@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en" 
+	  xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:h="http://xmlns.jcp.org/jsf/html" 
+	  xmlns:f="http://xmlns.jcp.org/jsf/core">
+	
+	<h:head> <!--Need the 'h:...' so the browser knows it is a Custom JSF header (same with body, form, etc.)-->
+		<title> Student Two Registration Form </title>
+		
+		<style> 
+			.error{color:red}
+		</style> <!-- Embedded Style-->
+	</h:head>
+	
+	<h:body>
+		<h:form>
+			First Name: 
+			<h:inputText value="#{studentTwo.firstName}" 
+						 label="First Name" /> 
+			<br/> <br/>
+			Last Name: 
+			<h:inputText value="#{studentTwo.lastName}" 
+						 label="Last Name" 
+						 required="true"
+						 id="last_name"
+						 requiredMessage="Your last name is required."/> <!-- ID is the ID of the label -->
+				<h:message for="last_name" styleClass="error"/> 
+			<br/> <br/>
+			Free Passes
+			<h:inputText value="#{studentTwo.freePasses}" 
+						 label="Free Passes" 
+						 id="free_passes" >
+						 <f:validateLongRange minimum="0" maximum="10"/>
+			</h:inputText>
+			<h:message for="free_passes" styleClass="error"/>
+			<br/> <br/>
+			Postal Code
+			<h:inputText value="#{studentTwo.postalCode}" 
+						 label="Postal Code" 
+						 required="true"
+						 id="postal_code"
+						 requiredMessage="You need to supply a 5-digit postal code." >
+				<f:validateLength minimum="5" maximum="5" /> 
+			</h:inputText>
+			<h:message for="postal_code" styleClass="error"/>
+			<br/> <br/>
+			<h:commandButton value="Submit" action="student_two_response" /> 
+		</h:form>
+	</h:body>
+</html>

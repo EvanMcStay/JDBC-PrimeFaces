@@ -1,0 +1,8 @@
+127.0.0.1 - - [15/Feb/2017:16:01:49 -0500] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [15/Feb/2017:16:01:49 -0500] "GET /03Validation/faces/student_four_form.xhtml HTTP/1.1" 200 1769
+0:0:0:0:0:0:0:1 - - [15/Feb/2017:16:01:56 -0500] "POST /03Validation/faces/student_four_form.xhtml HTTP/1.1" 200 357
+0:0:0:0:0:0:0:1 - - [15/Feb/2017:16:02:03 -0500] "POST /03Validation/faces/student_four_form.xhtml HTTP/1.1" 200 2079
+0:0:0:0:0:0:0:1 - - [15/Feb/2017:16:02:11 -0500] "POST /03Validation/faces/student_four_form.xhtml HTTP/1.1" 200 360
+127.0.0.1 - - [15/Feb/2017:16:07:20 -0500] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [15/Feb/2017:16:07:21 -0500] "GET /03Validation/faces/student_four_form.xhtml HTTP/1.1" 200 1769
+0:0:0:0:0:0:0:1 - - [15/Feb/2017:16:07:41 -0500] "POST /03Validation/faces/student_four_form.xhtml HTTP/1.1" 200 346

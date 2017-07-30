@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:h="http://java.sun.com/jsf/html"  
+      xmlns:f="http://java.sun.com/jsf/core"  
+      xmlns:p="http://primefaces.org/ui" > <!--If we use PrimeFaces, import this--> 
+  
+    <h:head>
+    	<h2> Spinner Example </h2>
+    </h:head>  
+      
+    <h:body>  
+    	<h:form>
+		    <h:panelGrid columns="2" cellpadding="5" styleClass="ui-grid">
+		        <h:outputLabel for="minMax" value="Quantity: " />
+		        <p:spinner id="minMax" value="#{spinnerView.number3}" min="0" max="100" />
+		    </h:panelGrid>
+		 
+		    <p:commandButton value="Add to Cart" update="display" oncomplete="PF('dlg').show()" />
+		 
+		    <p:dialog header="Values" widgetVar="dlg" showEffect="fold" hideEffect="fold">
+		        <h:panelGrid id="display" columns="2" cellpadding="5">
+		            <h:outputText value="Value 3: " />
+		            <h:outputText value="#{spinnerView.number3}" />
+		        </h:panelGrid>
+		    </p:dialog>
+		</h:form>
+    </h:body>  
+</html>  

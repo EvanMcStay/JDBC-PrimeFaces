@@ -1,0 +1,105 @@
+<!-- Evan McStay | IST411 Final | Hotel Booking with JSF and PrimeFaces | May 4, 2017 -->
+<!-- View -->
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:h="http://java.sun.com/jsf/html"  
+      xmlns:f="http://java.sun.com/jsf/core"  
+      xmlns:p="http://primefaces.org/ui" > 
+  
+    <h:head>  
+   		<title> Hotel Booking Application </title>
+  		<h1> Welcome to Sun Resort </h1>
+  		<hr/>
+  		<style>
+  			body
+  			{
+  				background-color:#A4BDC0;
+  			}
+  			
+  			h1
+  			{
+  				font-size:250%;
+  				text-align:center;
+  			}
+  		</style>
+    </h:head>  
+      
+    <h:body>
+    	<h4> Please enter your information below and press Click to Book to reserve a hotel room.</h4>
+    	
+    	<h:form> 
+    		<!-- First table that contains the individual's first name, last name, and email -->
+    		<table>
+    			<!-- Code below for the labels of the InputText elements -->
+    			<tr> 
+    				<th> First Name </th>
+    				<th> Last Name </th>
+    				<th> Email (name@domain.ext) </th>
+    			</tr>
+    			<!-- InputText element (text box/input box/etc.) 
+    				 The user can input any kind of text in the boxes -->
+    			<tr> 
+    				<th>
+    					<p:inputText label="firstName" required="true" id="first_Name" 
+    								 requiredMessage="You must enter your first name." 
+    								 value="#{personalInformation.firstName}"/>
+    					<h:message for="first_Name" styleClass="error" />
+    				</th>
+    				<th>
+    					<p:inputText label="lastName" required="true" id="last_Name" 
+    								 requiredMessage="You must enter your last name." 
+    								 value="#{personalInformation.lastName}"/>
+    					<h:message for="last_Name" styleClass="error" />
+    				</th>
+    				<th>
+    					<p:inputText label="email" required="true" id="email" 
+    								 requiredMessage="You must enter a valid email address." 
+    								 value="#{personalInformation.email}">
+    						<f:validateRegex pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]" /> 
+    					</p:inputText>
+    					<h:message for="email" styleClass="error" />
+    				</th>
+    			</tr>
+    		</table>
+    		
+    		<br/> <!-- Line break to separate information -->
+    		
+    		<!-- Second table that contains the information for checking in and out 
+    		     as well as the number of rooms, adults, and children -->
+    		<table>
+    			<!-- Code below for the labels of the Calendar and SelectOneMenu elements -->
+    			<tr>
+    				<th> Check-in (mm/dd/yyyy) </th>
+    				<th> Check-out (mm/dd/yyyy) </th>
+    			</tr>
+    			<!-- Code below for Pop-up Calendar and SelectOneMenu elements -->
+    			<tr>
+    				<!-- Pop-up Calendar element 
+    					 The user can click on the box and a calendar will pop-up
+    					 and allow the user to select dates and see the day they fall
+    					 on. The date will then be automatically inserted into the provided
+    					 text box in the mm/dd/yyyy format --> 
+    				<th> 
+    					<!-- Check-In Calendar code -->
+					    <p:calendar id="popupCheckIn" value="#{calendarView.checkIn}" 
+					    			required="true" requiredMessage="You must specify a check-in date." >
+					    </p:calendar>
+					    <h:message for="popupCheckIn" styleClass="error" /> 
+    				</th>
+    				<th> 
+    					<!-- Check-Out Calendar code -->
+					    <p:calendar id="popupCheckOut" value="#{calendarView.checkOut}" 
+					   			    required="true" requiredMessage="You must specify a check-out date." >
+					    </p:calendar>
+					    <h:message for="popupCheckOut" styleClass="error" /> 
+    				</th>
+    			</tr>
+    		</table>
+    		<br/>
+    		<h:commandButton value="Click to Book" action="information_response" />
+    	</h:form>
+   		<hr/>
+   		<h2> Contact Information </h2>
+   		<p> 100 University Drive, Monaca PA 15061 </p>
+   		<p> (724) 773 - 3500 </p>
+    </h:body> 
+</html> 

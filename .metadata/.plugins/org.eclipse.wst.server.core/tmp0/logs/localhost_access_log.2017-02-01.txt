@@ -1,0 +1,9 @@
+127.0.0.1 - - [01/Feb/2017:16:15:53 -0500] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [01/Feb/2017:16:15:54 -0500] "GET /01Hello/faces/HelloWorld.xhtml HTTP/1.1" 500 5419
+0:0:0:0:0:0:0:1 - - [01/Feb/2017:16:18:50 -0500] "GET /01Hello/faces/HelloWorld.xhtml HTTP/1.1" 200 1101
+0:0:0:0:0:0:0:1 - - [01/Feb/2017:16:19:00 -0500] "POST /01Hello/faces/HelloWorld.xhtml HTTP/1.1" 200 273
+0:0:0:0:0:0:0:1 - - [01/Feb/2017:16:21:48 -0500] "GET /01Hello/faces/HelloWorld.xhtml HTTP/1.1" 200 1101
+0:0:0:0:0:0:0:1 - - [01/Feb/2017:16:23:02 -0500] "GET /01Hello/faces/HelloWorld.xhtml HTTP/1.1" 200 1068
+0:0:0:0:0:0:0:1 - - [01/Feb/2017:16:23:17 -0500] "GET /01Hello/faces/HelloWorld.xhtml HTTP/1.1" 200 1068
+0:0:0:0:0:0:0:1 - - [01/Feb/2017:16:23:23 -0500] "POST /01Hello/faces/HelloWorld.xhtml HTTP/1.1" 200 273
+0:0:0:0:0:0:0:1 - - [01/Feb/2017:16:23:46 -0500] "POST /01Hello/faces/HelloWorld.xhtml HTTP/1.1" 200 280

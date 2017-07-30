@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en" 
+	  xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:h="http://xmlns.jcp.org/jsf/html" 
+	  xmlns:f="http://xmlns.jcp.org/jsf/core">
+	
+	<h:head> <!--Need the 'h:...' so the browser knows it is a Custom JSF header (same with body, form, etc.)-->
+		<title> Student Two Registration Form </title>
+	</h:head>
+	
+	<h:body>
+		<h:form>
+			First Name: <h:inputText value="#{studentTwo.firstName}" 
+									 label="First Name" /> 
+			<br/> <br/>
+			Last Name: <h:inputText value="#{studentTwo.lastName}" 
+									label="Last Name" />
+			<br/> <br/>
+			Country: <h:selectOneMenu value="#{studentTwo.country}" > 
+						<f:selectItems value="#{studentTwo.countryOptions}" />
+					 </h:selectOneMenu> <!-- Proper way to implement a drop down list for security reasons -->
+			
+				<!-- Combo Box Code
+					<h:selectOneMenu value="#{studentTwo.country}" > 
+						<f:selectItem itemValue="Brazil" />
+						<f:selectItem itemValue="Chile" />
+						<f:selectItem itemValue="France" />
+						<f:selectItem itemValue="Germany" />
+						<f:selectItem itemValue="Ghana" />
+						<f:selectItem itemValue="Turkey" />
+						<f:selectItem itemValue="United Kingdom" />
+						<f:selectItem itemValue="United States" />
+					 </h:selectOneMenu> 
+				-->
+			<br/> <br/>
+			<h:commandButton value="Submit" action="student_two_response"/> 
+		</h:form>
+	</h:body>
+</html>

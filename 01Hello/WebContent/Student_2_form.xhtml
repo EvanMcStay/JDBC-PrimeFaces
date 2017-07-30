@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en" 
+	  xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:h="http://xmlns.jcp.org/jsf/html" 
+	  xmlns:f="http://xmlns.jcp.org/jsf/core">
+	
+	<h:head> <!--Need the 'h:...' so the browser knows it is a Custom JSF header (same with body, form, etc.)-->
+		<title> Student Two Registration Form </title>
+		<style> .error{color:red}</style>
+	</h:head>
+	
+	<h:body>
+		<h:form>
+			First Name: <h:inputText value="#{studentTwo.firstName}" 
+									 label="First Name" /> 
+			<br/> <br/>
+			Last Name: <h:inputText value="#{studentTwo.lastName}" 
+									label="Last Name" />
+			<br/> <br/>
+			Free Passes: <h:inputText value="#{studentTwo.freePasses}" 
+									  label="Free Passes" 
+									  id="free_Passes" >
+							<f:validateLongRange minimum="0" maximum="10" /> 
+						</h:inputText>
+					<h:message for="free_Passes" styleClass="error" /> <!--Client-side validation implements CSS (Above)-->
+			<br/> <br/>
+			Age: <h:inputText value="#{studentTwo.studentAge}" 
+									  label="Student Age" 
+									  id="studentAge" >
+				</h:inputText>
+			<br/> <br/>
+			Email: <h:inputText value="#{studentTwo.studentEmail}" 
+									  label="Student Email" 
+									  id="studentEmail" >
+				   </h:inputText>
+			<br/> <br/>
+			Postal Code: <h:inputText value="#{studentTwo.postalCode}" 
+									  label="Postal Code" 
+									  id="postal_Code" >
+							<f:validateLength minimum="5" maximum="5" /> <!--Validates that the postal code is the right length-->
+						</h:inputText>
+					<h:message for="postal_Code" styleClass="error" />
+			<br/> <br/>
+			<h:commandButton value="Submit" action="student_two_response"/> 
+		</h:form>
+	</h:body>
+</html>

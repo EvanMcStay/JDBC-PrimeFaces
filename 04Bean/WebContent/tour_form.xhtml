@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en" 
+	  xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:h="http://xmlns.jcp.org/jsf/html" 
+	  xmlns:f="http://xmlns.jcp.org/jsf/core">
+	
+	<h:head> <!--Need the 'h:...' so the browser knows it is a Custom JSF header (same with body, form, etc.)-->
+		<title> MegaMinds Magic Tours </title>
+	</h:head>
+	
+	<h:body>
+		<h:form>
+			Select a tour: 
+			<h:selectOneMenu value="#{tourBean.kindOfTour}"> <!-- Drop down list -->
+				<f:selectItem itemLabel="City" itemValue="city"/>
+				<f:selectItem itemLabel="Country" itemValue="country"/>
+				<f:selectItem itemLabel="Campus" itemValue="campus"/>
+				<f:selectItem itemLabel="Museum" itemValue="museum"/>
+				<f:selectItem itemLabel="Zoo" itemValue="zoo"/>
+			</h:selectOneMenu>
+			
+			<h:commandButton value="Submit" action="#{tourBean.startTheTour()}"/> <!-- The controller calls a method inside the controller. 
+																					   This means that when we design the controller we will 
+																					   need the method startTheTour() and the variable kindOfTour -->
+		</h:form>
+	</h:body>
+</html>

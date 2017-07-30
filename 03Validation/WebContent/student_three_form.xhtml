@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en" 
+	  xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:h="http://xmlns.jcp.org/jsf/html" 
+	  xmlns:f="http://xmlns.jcp.org/jsf/core">
+	
+	<h:head> <!--Need the 'h:...' so the browser knows it is a Custom JSF header (same with body, form, etc.)-->
+		<title> Student Three Registration Form </title>
+		
+		<style> 
+			.error{color:red}
+		</style> <!-- Embedded Style-->
+	</h:head>
+	
+	<h:body>
+		<h:form>
+			First Name: 
+			<h:inputText value="#{studentThree.firstName}" 
+						 label="First Name" /> 
+			<br/> <br/>
+			Last Name: 
+			<h:inputText value="#{studentThree.lastName}" 
+						 label="Last Name" />
+			<br/> <br/>
+			Email:
+			<h:inputText value="#{studentThree.email}" 
+						 label="email" 
+						 required="true"
+						 id="email"
+						 validatorMessage="You must supply a valid email address (name@domain.ext)" >
+				<f:validateRegex pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]" />
+			</h:inputText>
+			<h:message for="email" styleClass="error"/>
+			<br/> <br/>
+			Phone Number:
+			<h:inputText value="#{studentThree.phoneNumber}" 
+						 label="Phone Number" 
+						 required="true"
+						 id="phone_number"
+						 validatorMessage="You need to supply a 10-digit phone number (###-###-####)" >
+				<f:validateRegex pattern="\d{3}-\d{3}-\d{4}" /> 
+			</h:inputText>
+			<h:message for="phone_number" styleClass="error"/>
+			<br/> <br/>
+			<h:commandButton value="Submit" action="student_three_response" /> 
+		</h:form>
+	</h:body>
+</html>

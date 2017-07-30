@@ -1,0 +1,54 @@
+<!-- Evan McStay | IST411 Fianl | Hotel Booking with JSF and PrimeFaces | March 17, 2017 -->
+<!-- View -->
+<!DOCTYPE html>
+
+<html lang="en" 
+	  xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"> 
+	
+	<h:head> 
+		<title> Hotel Booking Application </title>
+  		<h1> Welcome to Sun Resort </h1>
+		<hr/>
+  		<style>
+  			body
+  			{
+  				background-color:#A4BDC0;
+  			}
+  			
+  			h1
+  			{
+  				font-size:250%;
+  				text-align:center;
+  			}
+  			
+  			h2, p
+  			{
+  				text-align:center;
+  			}
+  		</style>
+	</h:head>
+	
+	<h:body>
+		<div class="container">
+			<h3> Congratulations, you have successfully reserved your hotel. </h3>
+			<br/>
+			<h:form>
+				Here is the information you provided:
+				<br/><br/>
+				<strong> Name: </strong> #{bookingView.firstName} #{bookingView.lastName} 
+				<br/><br/>
+				<strong> Email: </strong> #{bookingView.email}
+				<br/><br/>
+				<strong> Length of Stay: </strong> #{bookingView.arrivalDate} to #{bookingView.departureDate} 
+				<br/><br/>
+			</h:form>
+			<h3> Thank you for booking your hotel room through Sun Resort. Enjoy your stay! </h3>
+			<hr/>
+	   		<h2> Contact Information </h2>
+	   		<p> 100 University Drive, Monaca PA 15061 </p>
+	   		<p> (724) 773 - 3500 </p>
+   		</div>
+	</h:body>
+</html>

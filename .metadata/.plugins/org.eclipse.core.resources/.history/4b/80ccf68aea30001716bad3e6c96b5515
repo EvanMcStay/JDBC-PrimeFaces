@@ -1,0 +1,35 @@
+<!-- Evan McStay | IST411 Midterm 2 | Hotel Booking with JSF and PrimeFaces | March 17, 2017 -->
+<!-- View -->
+<!DOCTYPE html>
+
+<html lang="en" 
+	  xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"> 
+	
+	<h:head> 
+		<title> Hotel Booking Confirmation Page </title>
+		<h2> MegaMinds Bookings </h2>
+		<hr/>
+		<h:outputStylesheet library="css" name="styles.css"  />
+	</h:head>
+	
+	<h:body>
+		<h3> Congratulations, you have successfully booked your hotel. </h3>
+		<br/>
+		<h:form>
+			Here is the information you provided:
+			<br/><br/>
+			<strong> Name: </strong> #{personalInformation.firstName} #{personalInformation.lastName} 
+			<br/><br/>
+			<strong> Email: </strong> #{personalInformation.email} 
+			<br/><br/>
+			<strong> Length of Stay: </strong> #{calendarView.checkIn} to #{calendarView.checkOut} 
+		</h:form>
+		<h3> Thank you for booking your hotel room through MegaMinds Bookings. Enjoy your stay! </h3>
+		<hr/>
+   		<h2> Contact Information </h2>
+   		<p> 100 University Drive, Monaca PA 15061 </p>
+   		<p> (724) 773 - 3500 </p>
+	</h:body>
+</html>

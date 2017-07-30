@@ -1,0 +1,14 @@
+127.0.0.1 - - [06/Feb/2017:15:58:54 -0500] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [06/Feb/2017:15:58:55 -0500] "GET /01Hello/faces/Student_2_form.xhtml HTTP/1.1" 200 1307
+0:0:0:0:0:0:0:1 - - [06/Feb/2017:15:59:34 -0500] "POST /01Hello/faces/Student_2_form.xhtml HTTP/1.1" 200 1780
+0:0:0:0:0:0:0:1 - - [06/Feb/2017:15:59:39 -0500] "POST /01Hello/faces/Student_2_form.xhtml HTTP/1.1" 200 377
+0:0:0:0:0:0:0:1 - - [06/Feb/2017:16:05:25 -0500] "GET /01Hello/faces/Student_2_form.xhtml HTTP/1.1" 200 1307
+127.0.0.1 - - [06/Feb/2017:16:09:20 -0500] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [06/Feb/2017:16:09:21 -0500] "GET /01Hello/faces/Student_2_form.xhtml HTTP/1.1" 200 1392
+0:0:0:0:0:0:0:1 - - [06/Feb/2017:16:09:31 -0500] "POST /01Hello/faces/Student_2_form.xhtml HTTP/1.1" 200 2051
+0:0:0:0:0:0:0:1 - - [06/Feb/2017:16:10:00 -0500] "POST /01Hello/faces/Student_2_form.xhtml HTTP/1.1" 200 2055
+127.0.0.1 - - [06/Feb/2017:16:16:53 -0500] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [06/Feb/2017:16:16:53 -0500] "GET /01Hello/faces/Student_2_form.xhtml HTTP/1.1" 200 1602
+0:0:0:0:0:0:0:1 - - [06/Feb/2017:16:17:15 -0500] "POST /01Hello/faces/Student_2_form.xhtml HTTP/1.1" 200 459
+0:0:0:0:0:0:0:1 - - [06/Feb/2017:16:17:26 -0500] "GET /01Hello/faces/Student_2_form.xhtml HTTP/1.1" 200 1602
+0:0:0:0:0:0:0:1 - - [06/Feb/2017:16:17:50 -0500] "POST /01Hello/faces/Student_2_form.xhtml HTTP/1.1" 200 459

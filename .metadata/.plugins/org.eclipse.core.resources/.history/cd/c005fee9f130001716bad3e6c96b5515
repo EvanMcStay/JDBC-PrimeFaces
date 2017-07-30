@@ -1,0 +1,101 @@
+import java.util.Date;
+
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.component.UIComponent;
+import javax.faces.context.FacesContext;
+import javax.faces.validator.ValidatorException;
+
+import org.primefaces.context.RequestContext;
+
+/**
+ * @author Evan McStay | IST411 Final | 
+ * Hotel Booking with JSF and PrimeFaces | May 4, 2017 
+ * Model
+ */
+@ManagedBean
+public class BookingView
+{
+	//Class-level variables
+	private String firstName, lastName, email;
+	private Date arrivalDate, departureDate;
+	
+	//No Argument Constructor
+	public BookingView() {}
+	
+	//First name getters and setters
+	public String getFirstName() 
+	{
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) 
+	{
+		this.firstName = firstName;
+	}
+
+	//Last name getters and setters
+	public String getLastName() 
+	{
+		return lastName;
+	}
+
+	public void setLastName(String lastName) 
+	{
+		this.lastName = lastName;
+	}
+
+	//Email getters and setters
+	public String getEmail() 
+	{
+		return email;
+	}
+
+	public void setEmail(String email) 
+	{
+		this.email = email;
+	}
+	
+	//Arrival date getters and setters
+	public Date getArrivalDate() 
+	{
+		return arrivalDate;
+	}
+
+	public void setArrivalDate(Date arrivalDate) 
+	{
+		this.arrivalDate = arrivalDate;
+	}
+
+	//Departure date getters and setters
+	public Date getDepartureDate() 
+	{
+		return departureDate;
+	}
+
+	public void setDepartureDate(Date departureDate) 
+	{
+		this.departureDate = departureDate;
+	}
+	
+	public void validateEmail(FacesContext myContext, UIComponent myComponent, Object myValue) throws ValidatorException
+	{
+		
+	}
+	
+	//Method to display what the user submitted
+//	public void showInformation()
+//	{
+//		FacesMessage facesMessage = new FacesMessage("Booking Information", toString());
+//		RequestContext.getCurrentInstance().showMessageInDialog(facesMessage);
+//	}
+//
+//	public String toString()
+//	{
+//		return "First Name: " + firstName +
+//			   "\nLast Name: " + lastName +
+//			   "\nEmail: " + email +
+//			   "\nArrival Date: " + arrivalDate +
+//			   "\nDeparture Date: " + departureDate;
+//	}
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- View in the MVC architecture (Data is viewed/displayed) -->
+
+<html lang="en" 
+	  xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:f="http://xmlns.jcp.org/jsf/core">
+	
+	<h:head>
+		<title> Student Table Demo </title>
+	</h:head>
+	
+	<h:body>
+		<h3> Student Table Demo </h3>
+		<hr/>
+		<hr/>
+		<h:dataTable var="tempStudent" value="#{studentDataUtil.students}" border="1">
+			<h:column> <!-- First Column -->
+				<!-- The column header -->
+				<f:facet name="header"> First Name </f:facet>
+				
+				<!-- The value of each row -->
+				#{tempStudent.firstName} 
+			</h:column>
+			
+			<h:column> <!-- Second Column -->
+				<!-- The column header -->
+				<f:facet name="header"> Last Name </f:facet>
+				
+				<!-- The value of each row -->
+				#{tempStudent.lastName} 
+			</h:column>
+			
+			<h:column> <!-- Third Column -->
+				<!-- The column header -->
+				<f:facet name="header"> Email </f:facet>
+				
+				<!-- The value of each row -->
+				#{tempStudent.email} 
+			</h:column>
+		</h:dataTable>
+	</h:body>
+</html>
